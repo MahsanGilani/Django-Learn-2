@@ -3,10 +3,14 @@
 {% block content %}
     <h2>Blog Posts</h2>
     <ul>
-        <li>
-            <h3>post_title : salam</h3>
-            <p>description of post 'salam'</p>
+        {% for post in posts %}
+        <li> 
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.content }}</p>
         </li>
+        {% empty %}
+            <p>No post available</p>
+        {% endfor %}
     </ul>
 
 {% endblock %}
