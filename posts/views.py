@@ -6,5 +6,5 @@ from .models import Post
 def post_list(request):
     # return HttpResponse('hello')
     posts = Post.objects.all()
-    print(posts)
+    # print(posts)
     return render(request, 'posts/post_list.html',{'posts': posts})

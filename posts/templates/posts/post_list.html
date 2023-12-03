@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+    {% if request.user.is_authenticated %}
+        <p> Hi, {{ request.user }} </p>
+    {% else %}
+        <p> {{ request.user}} </p>
+    {% endif %}
     <h2>Blog Posts</h2>
     <ul>
         {% for post in posts %}
