@@ -11,8 +11,8 @@
     <ul>
         {% for post in posts %}
         <li> 
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.content }}</p>
+            <h3>{{ post.title|lower }}</h3>
+            <p>{{ post.cap_first }}</p>
         </li>
         {% empty %}
             <p>No post available</p>
