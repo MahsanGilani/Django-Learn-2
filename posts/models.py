@@ -11,3 +11,6 @@ class Post(models.Model):
     
     def __str__(self) -> str:
         return self.title
+    
+    def cap_first(self):
+        return self.content.capitalize()
