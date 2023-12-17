@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    {% for cm in comment %}
+        <h4>
+            <li>
+                {{ cm|lower }}
+            </li>
+        </h4>
+    {% empty %}
+        <li> no comment available </li>
+    {%endfor%}
+
+{% endblock %}
