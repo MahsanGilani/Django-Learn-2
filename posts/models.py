@@ -14,3 +14,10 @@ class Post(models.Model):
     
     def cap_first(self):
         return self.content.capitalize()
+    
+    
+class Comment(models.Model):
+    content = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    update = models.DateTimeField(auto_now=True)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
